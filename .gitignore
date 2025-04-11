@@ -1,0 +1,18 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# VS Code settings (optional)
+.vscode/
+
+# Node-related (only if you accidentally init npm)
+node_modules/
+
+# Environment variables (future-proofing)
+.env
+
+# Cache folders (just in case)
+.cache/
