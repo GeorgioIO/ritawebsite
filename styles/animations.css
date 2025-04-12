@@ -1,0 +1,124 @@
+@keyframes pulseLinkbar {
+    0%{
+        opacity: 0;
+    }    
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes marqueeScroll  {
+    0% { 
+        transform: translateX(-100%); 
+    }
+    100% { 
+        transform: translateX(100%); 
+    }
+}
+
+
+/* Icon of navigation links in header */
+
+@keyframes showIcon {
+    0%{
+        opacity: 0;
+        transform: translateX(10px) scale(0.5);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+
+@keyframes hideIcon {
+    0%{
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+    100%{
+        opacity: 0;
+        transform: translateX(10px) scale(0.5);
+        
+    }
+}
+
+
+.showIcon {
+    animation: showIcon 500ms ease-in-out forwards;
+}
+
+.hideIcon {
+    animation: hideIcon 500ms ease-in-out forwards;
+}
+/* ------------------------------------- */
+
+/* bar under navgiation links in header */
+@keyframes showAnimationBar {
+    0%{
+        width: 0%;
+    }    
+    100%{
+        width: 100%;
+    }
+}
+
+@keyframes hideAnimationBar {
+    0%{
+        width: 100%;
+    }
+    100%{
+        width: 0%;
+    }
+}
+
+.showAnimationBar {
+    animation: showAnimationBar 500ms ease-in-out forwards;
+}
+
+.hideAnimationBar {
+    animation: hideAnimationBar 500ms ease-in-out forwards;
+}
+
+/* ------------------------------------- */
+
+
+@keyframes textHeroAnimation {
+    0%{
+        stroke-dashoffset: 90;
+    }
+    80%{
+        fill: transparent;
+    }
+    100%{
+        fill: #fff;
+        stroke-dashoffset: 0;
+    }
+}
+
+
+@keyframes showSideBar{
+    0%{ 
+        opacity: 0; 
+    }
+    100%{ 
+        opacity: 1;        
+    }
+}
+
+@keyframes hideSideBar{
+    0%{ 
+        opacity: 1; 
+    }
+    100%{ 
+        opacity: 0;        
+    }
+}
+
+.showSidebar{
+    animation: showSideBar 300ms ease-in-out forwards;
+}
+
+.hideSidebar{
+    animation: hideSideBar 300ms ease-in-out forwards;
+}

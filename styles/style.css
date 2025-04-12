@@ -1,0 +1,321 @@
+/* General Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+
+/* html + body */
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    min-height: 100vh;
+}
+
+body {
+    font-family: var(--default-font);
+    background-color: var(--body-bgcolor);
+    overflow-x: hidden;
+    width: 100%;
+    height: 130vh;
+}
+
+/* Announcement bar */
+.announcement-bar{
+    background-color: var(--announcement-bar-bgcolor);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}
+
+.announcement-bar > p{
+    font-family: "Poppins" , sans-serif;
+    font-weight: 700;
+    color: var(--announcement-bar-fontcolor);
+    font-size: 1.13rem;
+    animation: marqueeScroll 10s linear infinite ;
+    text-wrap: nowrap;
+}
+
+.announcement-bar > p > a{
+    color: var(--announcement-bar-fontcolor);
+    text-decoration: none;
+    font-weight: 900;
+    position: relative;
+
+}
+
+.announcement-bar > p > a::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: var(--announcement-bar-linkbar-bgcolor);
+    bottom: -2px;
+    border-radius: 10px;
+    opacity: 0;
+    animation: pulseLinkbar 1s ease-in-out infinite;
+}
+
+header{
+    display: flex;
+    background-color: var(--header-bgcolor);
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 25px;
+    position: relative;
+    z-index: 2;
+    
+}
+
+.navigation-container > ul
+{
+    display: flex;
+    gap: 25px;
+}
+
+.navigation-container > ul > li{
+    font-size: 1.15rem;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: ease-in-out 500ms;
+    color: var(--navigation-links-fontcolor);
+    position: relative;
+}
+
+.navigation-container > ul > li:hover{
+    color: var(--navigation-links-fontcolor-hover);
+}
+
+.navigation-container > ul > li img{
+    opacity: 0;
+    transform: translateX(10px) scale(0.5);
+}
+
+.navigation-container > ul > li.hovered:hover::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 2px;
+    background-color: var(--navigation-links-bar-bgcolor);
+    bottom: -5px;
+    animation: showAnimationBar 500ms ease-in-out forwards;
+}
+
+.book-now-button{
+    width: 130px;
+    height: 40px;
+    background-color: var(--book-now-btn-bgcolor);
+    color: var(--book-now-btn-fontcolor);
+    font-family: "Poppins" , sans-serif;
+    font-weight: 700;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.182);
+    transition: ease-in-out 500ms;
+}
+
+.book-now-button:hover{
+    background-color: var(--book-now-btn-bgcolor-hover);
+    color: var(--book-now-btn-fontcolor-hover);
+}
+
+.burger-menu{
+    width: 40px;
+    height: 40px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.burger-menu > .burger-line{
+    width: 100%;
+    height: 4px;
+    background-color: #CDA49F;
+    border-radius: 10px;
+}
+
+
+#hero
+{
+    width: 100%;
+    height: 100vh;
+    background: url("../assets/images/hero-image-two.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+    z-index: 2;
+    padding: 15px;
+}
+
+#hero::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.523);
+    z-index: -1;
+}
+
+#hero > .rita-name
+{
+    font-size: 2.2rem;
+    color: #E8C7C2;
+    text-align: center;
+}
+
+.hero-text-animation{
+    width: 100%;
+    height: 200px;
+}
+
+.hero-text-animation path{
+    fill: transparent;
+    stroke: #E8C7C2;
+    stroke-width: 0.3;
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: textHeroAnimation 4s ease-in-out 1 forwards;
+}
+
+
+#hero > p{
+    font-size: 1.7rem;
+    color: #E8C7C2;
+    text-align: center;
+}
+
+#hero > .book-now-button{
+    width: 200px;
+    background-color: var(--hero-book-now-btn-bgcolor);
+    color: var(--hero-book-now-btn-fontcolor);
+}
+
+#hero > .book-now-button:hover{
+    background-color: var(--hero-book-now-btn-bgcolor-hover);
+    color: var(--hero-book-now-btn-fontcolor-hover);
+}
+/* SIDEBAR */
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background:linear-gradient(to right , #F8F4F1 , #ce7a6c);
+    z-index: 5;
+    opacity: 1;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+}
+
+.sidebar > .navigation-container
+{
+    width: 100%;
+    height: 350px;
+}
+
+.sidebar > .navigation-container > ul
+{ 
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar > .navigation-container > ul > li
+{ 
+    width: 150px;
+}
+
+.sidebar .book-now-button
+{
+    width: 50%;
+}
+
+.close-sidebar-button{
+
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: transparent;
+}
+
+
+/* Media Queries */
+
+@media (max-width: 1024px) {
+    header > .navigation-container > ul
+    {
+        display: flex;
+        gap: 15px;
+    }
+  }
+  
+  @media (max-width: 930px) {
+    header > .navigation-container,
+    header > .book-now-button
+    {
+        display: none;
+    }
+
+    .burger-menu{
+        display: flex;
+    }
+  }
+
+  @media (max-width: 768px) {
+
+  }
+  
+  @media (max-width: 480px) {
+    .sidebar .book-now-button
+    {
+        width: 100%;
+    }
+    .sidebar,
+    .sidebar > .navigation-container > ul
+    { 
+        align-items: flex-start;
+    }
+
+  }
+
+  @media (max-width: 380px) {
+    .sidebar > .navigation-container > ul > li
+    { 
+        width: 100%;
+    }
+
+    .sidebar .book-now-button
+    {
+        width: 100%;
+    }
+
+  }

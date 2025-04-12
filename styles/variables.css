@@ -1,0 +1,25 @@
+:root{
+    /* fonts */
+    --default-font : "Poppins" , sans-serif;
+
+
+    /* colors */
+    --body-bgcolor : #fef8f8;
+    --announcement-bar-bgcolor : #E3C6B8;
+    --announcement-bar-linkbar-bgcolor : #6f5c48;
+    --header-bgcolor : #F8F4F1;
+    --navigation-links-bar-bgcolor : #C8A98C;
+    --book-now-btn-bgcolor : #645648;
+    --hero-book-now-btn-bgcolor : #C8A98C;
+    --hero-book-now-btn-bgcolor-hover : #645648;
+    --book-now-btn-bgcolor-hover : #C8A98C;
+
+    --book-now-btn-fontcolor : #C8A98C;
+    --hero-book-now-btn-fontcolor : #645648;
+    --hero-book-now-btn-fontcolor-hover : #C8A98C;
+    --book-now-btn-fontcolor-hover : #645648;
+    --announcement-bar-fontcolor : #6f5c48;
+    --navigation-links-fontcolor : #645648;
+    --navigation-links-fontcolor-hover : #C8A98C;
+
+}
