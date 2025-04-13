@@ -2,6 +2,7 @@ Nude Shades:
 Soft Nude: #E3C6B8
 Light Nude: #D8BBA2
 Warm Beige Nude: #C8A98C
+Mocha Bronze : #675341
 
 Nude Pink Shades:
 Soft Nude Pink: #E8C7C2
