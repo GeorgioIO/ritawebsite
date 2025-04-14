@@ -2,6 +2,22 @@ const navigationLinks = document.querySelectorAll(".navigation-container ul li")
 const burgerMenu = document.querySelector(".burger-menu");
 const sideBar = document.querySelector(".sidebar")
 const closeSideBarButton = document.querySelector(".close-sidebar-button")
+const servicesCard = document.querySelectorAll(".services-cards-container .card");
+
+
+servicesCard.forEach(card => {
+    card.addEventListener("mouseover" , (event) => {
+        let bgIcon = event.currentTarget.querySelector(".card-bgphoto");
+        bgIcon.classList.remove("hideCardBg");
+        bgIcon.classList.add("showCardBg");
+    })
+
+    card.addEventListener("mouseleave" , (event) => {
+        let bgIcon = event.currentTarget.querySelector(".card-bgphoto");
+        bgIcon.classList.remove("showCardBg");
+        bgIcon.classList.add("hideCardBg");
+    })
+})
 
 navigationLinks.forEach(link => {
     link.addEventListener("mouseover" , (event) => {

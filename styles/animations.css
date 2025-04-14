@@ -16,6 +16,37 @@
     }
 }
 
+/*  To Show and hide the bg icon of services card */
+
+@keyframes showCardBg 
+{
+    0% {
+      transform: translateX(400px);
+    }
+    100% {
+      transform: translateX(90px);
+    }
+}
+
+@keyframes hideCardBg 
+{
+    0% {
+      transform: translateX(90px);
+    }
+    100% {
+      transform: translateX(400px);
+    }
+}
+
+.showCardBg {
+    animation: showCardBg 500ms ease-in-out forwards;
+}
+
+.hideCardBg {
+    animation: hideCardBg 500ms ease-in-out forwards;
+}
+
+/* ------------------------------------- */
 
 /* Icon of navigation links in header */
 

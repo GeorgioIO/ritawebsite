@@ -225,9 +225,10 @@ header{
 }
 
 #about,
-#services
+#services,
+#gallery
 {
-    padding: 40px 30px;
+    padding: 50px 20px;
     display: flex;
     flex-direction: column;
     gap: 80px;
@@ -309,7 +310,7 @@ header{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
 }
 
 .card
@@ -328,6 +329,10 @@ header{
     justify-content: space-between;
     color: #675341;
     gap: 8px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: ease-in-out 500ms;
 }
 
 .card-header,
@@ -369,8 +374,71 @@ header{
     border-radius: 2rem;
     font-family: "Poppins" , sans-serif;
     color: #F8F4F1;
-
+    transition: ease-in-out 500ms;
+    box-shadow: 0px 0px 5px 0px rgba(128, 128, 128, 0.692);
 }
+
+
+.card > .card-bgphoto
+{
+    position: absolute;
+    bottom: 0;
+    right:  0;
+    z-index: -1;
+    transform: translateX(400px);
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+.card:hover  .card-bgphoto
+{
+    animation: showCardBg 500ms ease-in-out forwards;
+}
+
+.card > .card-button:hover{
+    background-color: #E3C6B8;
+    color: #675341;
+}
+
+
+/* Gallery */
+
+.gallery-container{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-container > .gallery-photo-container
+{
+    --shadow : #8E8E8E;
+
+    width: 400px;
+    height: 400px;
+    box-shadow: 0px 0px 5px 0px var(--shadow);
+    border-radius: .35rem;
+    overflow: hidden;
+}
+
+.gallery-photo-container > img
+{
+    width: 100%;
+    border-radius: .35rem;
+    height: 100%;
+    transition: transform ease-in 0.2s;
+    cursor: pointer;
+}
+
+.gallery-photo-container > img:hover
+{
+    transform: scale(1.2);
+}
+
+
+
 /* SIDEBAR */
 .sidebar{
     position: fixed;
@@ -460,6 +528,12 @@ header{
         grid-template-rows: 150px;
         grid-template-columns: repeat(4 , 150px);
     }
+
+    .gallery-container > .gallery-photo-container
+    {
+        width: 360px;
+        height: 360px;
+    }
   }
   
   @media (max-width: 930px) {
@@ -472,6 +546,16 @@ header{
     .burger-menu{
         display: flex;
     }
+
+    /* GALLERY */
+    .gallery-container > .gallery-photo-container
+    {
+        width: 330px;
+        height: 330px;
+        
+    }
+    
+    
   }
 
   @media (max-width: 768px) {
@@ -492,6 +576,13 @@ header{
 
     .card > .card-info > .card-description{
         font-size: 1rem;
+    }
+
+    /* GALLERY */
+    .gallery-container > .gallery-photo-container
+    {
+        width: 100%;
+        height: auto;        
     }
   }
   
