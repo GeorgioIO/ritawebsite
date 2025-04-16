@@ -3,6 +3,24 @@ const burgerMenu = document.querySelector(".burger-menu");
 const sideBar = document.querySelector(".sidebar")
 const closeSideBarButton = document.querySelector(".close-sidebar-button")
 const servicesCard = document.querySelectorAll(".services-cards-container .card");
+const locationSwitchers = document.querySelectorAll(".location-switcher");
+
+
+locationSwitchers.forEach(switcher => {
+    switcher.addEventListener("click" , (event) => {
+        let location = event.target.id;
+        if(location === "ehdenRadio")
+        {
+            document.querySelector("#ehdenFrame").style.display = "block";
+            document.querySelector("#mejdlayaFrame").style.display = "none";
+        }
+        else if(location === "mejdlayaRadio")
+        {
+            document.querySelector("#mejdlayaFrame").style.display = "block";
+            document.querySelector("#ehdenFrame").style.display = "none";
+        }
+    })
+})
 
 
 servicesCard.forEach(card => {

@@ -20,6 +20,9 @@ strong
     color: #645648;
 }
 
+textarea{
+    resize: none;
+}
 
 /* html + body */
 html {
@@ -227,7 +230,8 @@ header{
 #about,
 #services,
 #gallery,
-#course
+#course,
+#contact
 {
     padding: 50px 20px;
     display: flex;
@@ -440,7 +444,8 @@ header{
 
 
 /* Course */
-#course > .section-title
+#course > .section-title,
+#contact > .section-title
 {
     flex-direction: column;
     gap: 5px;
@@ -567,6 +572,204 @@ header{
     width: 240px;
     height: 50px;
 }
+
+/* Contact */
+#contact
+{
+    align-items: center;
+}
+
+.form-container
+{
+    width: 75%;
+    height: auto;
+    display: flex;
+    --shadow : #8E8E8E;
+    box-shadow: 0px 0px 5px 0px var(--shadow);
+
+}
+
+.form-container > .locations-container 
+{
+    position: relative;
+    width: 50%;
+}
+
+.locations-container > iframe
+{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#ehdenFrame
+{
+    display: none;
+}
+
+#mejdlayaFrame
+{
+    display: block;
+}
+
+.locations-switchers
+{
+    width: auto;
+    height: 100px;
+    background-color: white;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: 2px solid var(--book-now-btn-bgcolor);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: center;
+    gap: 12px;
+}
+
+.locations-switchers > li
+{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.form-container > form{
+    --bg-color : #F8F4F1;
+    
+    width: 50%;
+    height: auto;    
+    background-color: white;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+form > .input-container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+    height: 70px;
+}
+
+form > .txtarea-container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+    height: 90px;
+}
+
+.input-container > input,
+.txtarea-container > textarea{
+    width: 100%;
+    height: 100%;
+}
+
+.input-container > input,
+.txtarea-container > textarea
+{
+    --font-color : #b69b81;
+    --border-color : #b69b81;
+
+    width: 100%;
+    height: 100%;
+    font-family: var(--general-font);
+    padding: 10px;
+    font-size: 0.8rem;
+    background-color: transparent;
+    border: 2px solid var(--border-color);
+    border-radius: 0.25rem;
+    color: var(--font-color);
+    font-weight: 600;
+    resize: none;
+}
+
+.form-buttons{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.form-buttons > button{
+    width: 130px;
+    height: 30px;
+    border-radius: 50px;
+}
+
+.form-buttons > button{
+    width: 130px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: var(--book-now-btn-bgcolor);
+    color: var(--book-now-btn-fontcolor);
+    font-family: "Poppins" , sans-serif;
+    font-weight: 700;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.182);
+    transition: ease-in-out 500ms;
+}
+
+.form-buttons > button:hover{
+    background-color: var(--book-now-btn-bgcolor-hover);
+    color: var(--book-now-btn-fontcolor-hover);
+}
+
+.contact-info-container
+{
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(4 , 230px);
+    grid-template-rows: auto;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.contact-info-container > .contact-card
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    box-shadow: 0px 0px 5px 0px #8E8E8E;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: ease-in-out 500ms;
+}
+
+.contact-info-container > .contact-card:hover{
+    transform: scale(1.05);
+}
+
+.contact-card > .contact-header
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    color: #675341;
+}
+
+.contact-header > h3
+{
+    font-size: 1.35rem;
+}
+
+.contact-info > p{
+    color: #675341;
+    font-size: 0.9rem;
+}
+
+
 /* SIDEBAR */
 .sidebar{
     position: fixed;
@@ -626,6 +829,20 @@ header{
         grid-template-rows: 250px;
         grid-template-columns: repeat(4 , 250px);
     }
+
+    
+    .contact-info-container
+    {
+        grid-template-columns: repeat(2 , 260px);
+        grid-template-rows: repeat(2 , 260px);
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .contact-info-container > .contact-card
+    {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 1240px) {
@@ -637,6 +854,29 @@ header{
         grid-template-rows: 200px;
         grid-template-columns: repeat(4 , 200px);
     }
+
+    .form-container
+    {
+        flex-direction: column;
+    }
+
+    .form-container > .locations-container 
+    {
+        position: relative;
+        width: 100%;
+        height: 500px;
+    }
+
+    .form-container > form{
+        
+        width: 100%;
+    }
+
+    .form-buttons
+    {
+        justify-content: center;
+    }
+    
 }
 
 @media (max-width: 1024px) {
@@ -725,6 +965,18 @@ header{
         justify-content: center;
         align-items: center;
     }
+
+    .form-container
+    {
+        width: 100%;
+    }
+
+    .contact-info-container
+    {
+        width: 100%;
+        grid-template-columns: repeat(1 , 350px);
+        grid-template-rows: repeat(4 , 250px);
+    }
   }
   
   @media (max-width: 480px) {
@@ -753,6 +1005,27 @@ header{
         height: 130px;
         align-items: center;
         justify-content: center;
+    }
+
+    .contact-info-container
+    {
+        width: 100%;
+        grid-template-columns: repeat(1 , 100%);
+        grid-template-rows: repeat(4 , 250px);
+    }
+
+    .form-container > form{
+        padding: 30px;
+    }
+
+    .locations-switchers
+    {
+        width: 100px;
+    }
+
+    .locations-container  label  
+    {
+        font-size: 0.8rem;
     }
 
   }
