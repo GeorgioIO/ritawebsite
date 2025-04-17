@@ -666,6 +666,11 @@ header{
     gap: 8px;
     align-items: center;
 }
+
+.locations-switchers > li > input
+{
+    flex-shrink: 0;
+}
 .form-container > form{
     --bg-color : #F8F4F1;
     
