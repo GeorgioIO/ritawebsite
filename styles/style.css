@@ -879,6 +879,7 @@ footer > h1
 {
     color: #302a23;
     width: 270px;
+    text-wrap: nowrap;
 }
 
 footer > .line
