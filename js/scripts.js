@@ -4,7 +4,28 @@ const sideBar = document.querySelector(".sidebar")
 const closeSideBarButton = document.querySelector(".close-sidebar-button")
 const servicesCard = document.querySelectorAll(".services-cards-container .card");
 const locationSwitchers = document.querySelectorAll(".location-switcher");
+const sidebarLinks = document.querySelectorAll(".sidebar > .navigation-container > ul > li > a")
+const upButton = document.querySelector(".up-button");
 
+upButton.addEventListener("click" , () => {
+    window.scroll({
+        top : 0,
+        behavior : 'smooth'
+    });
+})
+
+sidebarLinks.forEach(link => [
+    link.addEventListener("click" , () => {
+        setTimeout(() => {
+            sideBar.classList.remove("showSidebar");
+            sideBar.classList.add("hideSidebar");
+        } , 600)
+    
+        setTimeout(() => {
+            sideBar.style.display = "none";
+        }, 800)
+    })
+])
 
 locationSwitchers.forEach(switcher => {
     switcher.addEventListener("click" , (event) => {

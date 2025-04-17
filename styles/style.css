@@ -24,6 +24,11 @@ textarea{
     resize: none;
 }
 
+a
+{
+    text-decoration: none;
+}
+
 /* html + body */
 html {
     font-size: 16px;
@@ -78,6 +83,27 @@ body {
     animation: pulseLinkbar 1s ease-in-out infinite;
 }
 
+/* up button */
+.up-button{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #302a23;
+    width: 40px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.up-button > button
+{
+    background-color: transparent;
+}
+
 header{
     display: flex;
     background-color: var(--header-bgcolor);
@@ -96,18 +122,23 @@ header{
 }
 
 .navigation-container > ul > li{
-    font-size: 1.15rem;
     cursor: pointer;
-    font-weight: 600;
     display: flex;
     align-items: center;
     gap: 10px;
     transition: ease-in-out 500ms;
-    color: var(--navigation-links-fontcolor);
     position: relative;
 }
 
-.navigation-container > ul > li:hover{
+.navigation-container > ul > li a
+{
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--navigation-links-fontcolor);
+    transition: ease-in-out 500ms;
+}
+
+.navigation-container > ul > li:hover a{
     color: var(--navigation-links-fontcolor-hover);
 }
 
@@ -804,6 +835,12 @@ form > .txtarea-container
 .sidebar > .navigation-container > ul > li
 { 
     width: 150px;
+    
+}
+
+.sidebar > .navigation-container > ul > li a
+{
+    text-align: center;
 }
 
 .sidebar .book-now-button
@@ -820,6 +857,77 @@ form > .txtarea-container
 }
 
 
+/* Footer */
+footer{
+    display: flex;
+    background-color: var(--header-bgcolor);
+    align-items: center;
+    padding: 15px 45px;
+    gap: 20px;
+    border-top: 2px solid #302a23;
+    box-shadow: 10px 0px 20px 0px rgba(128, 128, 128, 0.422);
+
+}
+
+
+footer > h1
+{
+    color: #302a23;
+    width: 270px;
+}
+
+footer > .line
+{
+    width: 3px;
+    height: 130px;
+    border-radius: 5px;
+    background-color: #302a23;
+}
+
+footer > .footer-navigation-container
+{
+    margin-right: auto;
+}
+
+footer > .footer-navigation-container > ul
+{
+    display: flex;
+    gap: 10px;
+}
+
+.footer-navigation-container > ul > li
+{
+    cursor: pointer;
+}
+
+
+.footer-navigation-container > ul > li a
+{
+    font-size: 0.9rem;
+    color: #302a23;
+}
+
+
+.socials
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.socials-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.socials > p
+{
+    color: #302a23;
+}
 /* Media Queries */
 @media (max-width: 1400px) {
     .about-container{
@@ -901,6 +1009,29 @@ form > .txtarea-container
     {
         width: 360px;
         height: 360px;
+    }
+
+    footer
+    {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer > .line
+    {
+        width: 300px;
+        height: 3px;
+    }
+
+    .footer-navigation-container
+    {
+        width: 100%;
+    }
+
+    .footer-navigation-container > ul
+    {
+        justify-content: center;
     }
   }
   
