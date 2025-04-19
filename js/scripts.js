@@ -7,6 +7,20 @@ const locationSwitchers = document.querySelectorAll(".location-switcher");
 const sidebarLinks = document.querySelectorAll(".sidebar > .navigation-container > ul > li > a")
 const upButton = document.querySelector(".up-button");
 
+
+window.addEventListener("scroll" , () => {
+    if(window.scrollY > 150)
+    {
+        upButton.style.display = "flex";
+    }
+
+    if(window.scrollY == 0)
+    {
+        upButton.style.display = "none";
+
+    }
+})
+
 upButton.addEventListener("click" , () => {
     window.scroll({
         top : 0,
