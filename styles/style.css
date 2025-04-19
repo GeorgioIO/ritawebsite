@@ -17,7 +17,7 @@ button {
 
 strong
 {
-    color: #645648;
+    color: var(--fontcolor-strong);
 }
 
 textarea{
@@ -37,8 +37,8 @@ html {
 }
 
 body {
-    font-family: var(--default-font);
-    background-color: var(--body-bgcolor);
+    font-family: var(--font-default);
+    background-color: var(--bg-body);
     overflow-x: hidden;
     width: 100%;
     height: 130vh;
@@ -46,7 +46,7 @@ body {
 
 /* Announcement bar */
 .announcement-bar{
-    background-color: var(--announcement-bar-bgcolor);
+    background-color: var(--bg-announcement-bar);
     padding: 10px 20px;
     display: flex;
     justify-content: center;
@@ -57,14 +57,14 @@ body {
 .announcement-bar > p{
     font-family: "Poppins" , sans-serif;
     font-weight: 700;
-    color: var(--announcement-bar-fontcolor);
+    color: var(--fontcolor-announcement-bar);
     font-size: 1.13rem;
     animation: marqueeScroll 10s linear infinite ;
     text-wrap: nowrap;
 }
 
 .announcement-bar > p > a{
-    color: var(--announcement-bar-fontcolor);
+    color: var(--fontcolor-announcement-bar);
     text-decoration: none;
     font-weight: 900;
     position: relative;
@@ -76,7 +76,7 @@ body {
     content: "";
     width: 100%;
     height: 3px;
-    background-color: var(--announcement-bar-linkbar-bgcolor);
+    background-color: var(--bg-announcement-linkbar);
     bottom: -2px;
     border-radius: 10px;
     opacity: 0;
@@ -88,7 +88,7 @@ body {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #302a23;
+    background-color: var(--bg-up-button);
     width: 40px;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
@@ -106,7 +106,7 @@ body {
 
 header{
     display: flex;
-    background-color: var(--header-bgcolor);
+    background-color: var(--bg-header);
     justify-content: space-between;
     align-items: center;
     padding: 5px 25px;
@@ -134,12 +134,12 @@ header{
 {
     font-size: 1.15rem;
     font-weight: 600;
-    color: var(--navigation-links-fontcolor);
+    color: var(--fontcolor-navigation-link);
     transition: ease-in-out 500ms;
 }
 
 .navigation-container > ul > li:hover a{
-    color: var(--navigation-links-fontcolor-hover);
+    color: var(--fontcolor-navigation-link-hover);
 }
 
 .navigation-container > ul > li img{
@@ -153,26 +153,28 @@ header{
     width: 100%;
     left: 0;
     height: 2px;
-    background-color: var(--navigation-links-bar-bgcolor);
+    background-color: var(--bg-navigation-bar);
     bottom: -5px;
     animation: showAnimationBar 500ms ease-in-out forwards;
 }
 
 .book-now-button{
+    --shadow : rgba(0, 0, 0, 0.182);
+
     width: 130px;
     height: 40px;
-    background-color: var(--book-now-btn-bgcolor);
-    color: var(--book-now-btn-fontcolor);
-    font-family: "Poppins" , sans-serif;
+    background-color: var(--bg-book-now);
+    color: var(--fontcolor-book-now);
+    font-family: var(--font-default);
     font-weight: 700;
     border-radius: 50px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.182);
+    box-shadow: 0px 0px 10px 0px var(--shadow);
     transition: ease-in-out 500ms;
 }
 
 .book-now-button:hover{
-    background-color: var(--book-now-btn-bgcolor-hover);
-    color: var(--book-now-btn-fontcolor-hover);
+    background-color: var(--bg-book-now-hover);
+    color: var(--fontcolor-book-now-hover);
 }
 
 .burger-menu{
@@ -186,7 +188,7 @@ header{
 .burger-menu > .burger-line{
     width: 100%;
     height: 4px;
-    background-color: #CDA49F;
+    background-color: var(--bg-burger-menu-lines);
     border-radius: 10px;
 }
 
@@ -222,7 +224,7 @@ header{
 #hero > .rita-name
 {
     font-size: 2.2rem;
-    color: #E8C7C2;
+    color: var(--fontcolor-rita-name-hero);
     text-align: center;
 }
 
@@ -243,19 +245,19 @@ header{
 
 #hero > p{
     font-size: 1.7rem;
-    color: #E8C7C2;
+    color: var(--fontcolor-hero-para);
     text-align: center;
 }
 
 #hero > .book-now-button{
     width: 200px;
-    background-color: var(--hero-book-now-btn-bgcolor);
-    color: var(--hero-book-now-btn-fontcolor);
+    background-color: var(--bg-hero-book-now);
+    color: var(--fontcolor-hero-book-now);
 }
 
 #hero > .book-now-button:hover{
-    background-color: var(--hero-book-now-btn-bgcolor-hover);
-    color: var(--hero-book-now-btn-fontcolor-hover);
+    background-color: var(--bg-hero-book-now-hover);
+    color: var(--fontcolor-hero-book-now-hover);
 }
 
 #about,
@@ -283,11 +285,11 @@ header{
     width: 350px;
     height: 3px;
     border-radius: 50px;
-    background-color: #645648;
+    background-color: var(--bg-section-lines);
 }
 
 .section-title > h2{
-    color: var(--section-title-fontcolor);
+    color: var(--fontcolor-section-title);
     font-size: 2.2rem;
 }
 
@@ -351,10 +353,11 @@ header{
 
 .card
 {
+    --shadow : #8E8E8E;
     width: 400px;
     height: 400px;
-    background-color: #F8F4F1;
-    box-shadow: 0px 0px 5px 0px #8E8E8E;
+    background-color: var(--bg-service-card);
+    box-shadow: 0px 0px 5px 0px var(--shadow);
     border-top-right-radius: 2rem;
     border-bottom-right-radius:2rem;
     border-bottom-left-radius:2rem ;
@@ -363,7 +366,7 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    color: #675341;
+    color: var(--fontcolor-service-card);
     gap: 8px;
     position: relative;
     overflow: hidden;
@@ -396,22 +399,25 @@ header{
 
 .card > .line{
     --line-color : #675341;
+
     width: 100%;
     height: 2px;
     background-color: var(--line-color);
 }
 
 .card-button{
-    background-color: #675341;
+    --shadow : rgba(128, 128, 128, 0.692);
+
+    background-color: var(--bg-service-card-button);
     align-self: center;
     margin-right: 30px;
     width: 100%;
     height: 35px;
     border-radius: 2rem;
     font-family: "Poppins" , sans-serif;
-    color: #F8F4F1;
+    color: var(--fontcolor-service-card-button);
     transition: ease-in-out 500ms;
-    box-shadow: 0px 0px 5px 0px rgba(128, 128, 128, 0.692);
+    box-shadow: 0px 0px 5px 0px var(--shadow);
 }
 
 
@@ -434,8 +440,8 @@ header{
 }
 
 .card > .card-button:hover{
-    background-color: #E3C6B8;
-    color: #675341;
+    background-color: var(--bg-service-card-button-hover);
+    color: var(--fontcolor-service-card-button-hover);
 }
 
 
@@ -484,7 +490,7 @@ header{
 }
 
 .section-title > p{
-    color: var(--section-title-fontcolor);
+    color: var(--fontcolor-section-title);
 
 }
 
@@ -504,13 +510,15 @@ header{
 }
 
 .course-cards-container > .course-card{
+    --shadow : #8E8E8E;
+
     cursor: pointer;
     display: flex;
-    background-color: white;
+    background-color: var(--bg-course-card);
     gap: 12px;
     width: 400px;
     padding: 15px;
-    box-shadow: 0px 0px 5px 0px #8E8E8E;
+    box-shadow: 0px 0px 5px 0px var(--shadow);
     border-radius: 12px;
     transition: ease-in-out 500ms;
 }
@@ -525,7 +533,7 @@ header{
 {
     font-size: 1.25rem;
     font-weight: bold;
-    color: var(--section-title-fontcolor);
+    color: var(--fontcolor-course-card-title);
     transition: ease-in-out 500ms;
 
 }
@@ -533,7 +541,7 @@ header{
 .course-card-info > .course-card-description
 {
     
-    color: var(--section-title-fontcolor);
+    color: var(--fontcolor-course-card-description);
     transition: ease-in-out 500ms;
 
 }
@@ -548,18 +556,18 @@ header{
 }
 
 .course-card:hover{
-    background-color: #DDB3A8;
+    background-color: var(--bg-course-card-hover);
 }
 
 .course-card:hover > .course-card-info > .course-card-description,
 .course-card:hover > .course-card-info > .course-card-title
 {
-    color: #F8F4F1;
+    color: var( --fontcolor-course-card-description-hover);
 }
 
 .course-card:hover > svg path
 {
-    fill: #F8F4F1;
+    fill: var(--bg-course-card-icon);
 }
 
 .course-perks
@@ -573,7 +581,7 @@ header{
 
 .course-perks > h3{
     font-size: 1.45rem;
-    color: #645648;
+    color: var(--fontcolor-course-perk);
 }
 
 
@@ -594,7 +602,7 @@ header{
 
 .perks-container > li > p{
     font-size: clamp(1rem, 1.5vw, 1.3rem);
-    color: #302a23;
+    color: var(--fontcolor-course-perk-description );
 }
 
 #course > .book-now-button
@@ -612,12 +620,12 @@ header{
 
 .form-container
 {
+    --shadow : #8E8E8E;
+
     width: 75%;
     height: auto;
     display: flex;
-    --shadow : #8E8E8E;
     box-shadow: 0px 0px 5px 0px var(--shadow);
-
 }
 
 .form-container > .locations-container 
@@ -647,11 +655,11 @@ header{
 {
     width: auto;
     height: 100px;
-    background-color: white;
+    background-color: var(--bg-location-switcher);
     position: absolute;
     top: 10px;
     right: 10px;
-    border: 2px solid var(--book-now-btn-bgcolor);
+    border: 2px solid var(--border-location-switcher);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -671,12 +679,12 @@ header{
 {
     flex-shrink: 0;
 }
+
 .form-container > form{
-    --bg-color : #F8F4F1;
     
     width: 50%;
     height: auto;    
-    background-color: white;
+    background-color: var( --bg-contact-form);
     padding: 60px;
     display: flex;
     flex-direction: column;
@@ -717,7 +725,7 @@ form > .txtarea-container
 
     width: 100%;
     height: 100%;
-    font-family: var(--general-font);
+    font-family: var(--font-default);
     padding: 10px;
     font-size: 0.8rem;
     background-color: transparent;
@@ -741,20 +749,22 @@ form > .txtarea-container
 }
 
 .form-buttons > button{
+    --shadow : rgba(0, 0, 0, 0.182);
+
     width: 130px;
     height: 30px;
     border-radius: 50px;
-    background-color: var(--book-now-btn-bgcolor);
-    color: var(--book-now-btn-fontcolor);
+    background-color: var(--bg-form-buttons);
+    color: var(--fontcolor-form-buttons);
     font-family: "Poppins" , sans-serif;
     font-weight: 700;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.182);
+    box-shadow: 0px 0px 10px 0px var(--shadow);
     transition: ease-in-out 500ms;
 }
 
 .form-buttons > button:hover{
-    background-color: var(--book-now-btn-bgcolor-hover);
-    color: var(--book-now-btn-fontcolor-hover);
+    background-color: var(--bg-form-buttons-hover);
+    color: var(--fontcolor-form-buttons-hover);
 }
 
 .contact-info-container
@@ -769,6 +779,8 @@ form > .txtarea-container
 
 .contact-info-container > .contact-card
 {
+    --shadow : #8E8E8E;
+
     width: 100%;
     height: 100%;
     display: flex;
@@ -776,7 +788,7 @@ form > .txtarea-container
     align-items: center;
     gap: 20px;
     padding: 20px;
-    box-shadow: 0px 0px 5px 0px #8E8E8E;
+    box-shadow: 0px 0px 5px 0px var(--shadow);
     border-radius: 12px;
     cursor: pointer;
     transition: ease-in-out 500ms;
@@ -792,16 +804,16 @@ form > .txtarea-container
     flex-direction: column;
     align-items: center;
     gap: 12px;
-    color: #675341;
 }
 
 .contact-header > h3
 {
+    color: var(--fontcolor-contact-card-title);
     font-size: 1.35rem;
 }
 
 .contact-info > p{
-    color: #675341;
+    color: var(--fontcolor-contact-card-description);
     font-size: 0.9rem;
 }
 
@@ -864,20 +876,22 @@ form > .txtarea-container
 
 /* Footer */
 footer{
+    --shadow : rgba(128, 128, 128, 0.422);
+
     display: flex;
-    background-color: var(--header-bgcolor);
+    background-color: var(--bg-footer);
     align-items: center;
     padding: 15px 45px;
     gap: 20px;
-    border-top: 2px solid #302a23;
-    box-shadow: 10px 0px 20px 0px rgba(128, 128, 128, 0.422);
+    border-top: 2px solid var(--border-footer);
+    box-shadow: 10px 0px 20px 0px var(--shadow);
 
 }
 
 
 footer > h1
 {
-    color: #302a23;
+    color: var(--fontcolor-footer-rita-name);
     width: 270px;
     text-wrap: nowrap;
 }
@@ -910,7 +924,7 @@ footer > .footer-navigation-container > ul
 .footer-navigation-container > ul > li a
 {
     font-size: 0.9rem;
-    color: #302a23;
+    color: var(--fontcolor-footer-links);
 }
 
 
@@ -930,10 +944,17 @@ footer > .footer-navigation-container > ul
     width: 100%;
 }
 
+.socials-container > li > button
+{
+    background-color: transparent;
+}
+
 .socials > p
 {
-    color: #302a23;
+    color: var(--fontcolor-footer-email);
 }
+
+
 /* Media Queries */
 @media (max-width: 1400px) {
     .about-container{

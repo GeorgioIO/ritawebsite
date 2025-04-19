@@ -1,26 +1,69 @@
-:root{
-    /* fonts */
-    --default-font : "Poppins" , sans-serif;
+:root {
+    /* =====| Typography |===== */
+    --font-default: "Poppins", sans-serif;
 
+    /* ===== Base Colors ===== */
+    --color-light: #F3ECE7; /* Soft Ivory White */
+    --color-dark: #675341; /* Mocha Bronze */
+    --color-accent: #C8A98C; /* Warm Beige Nude */
+    --color-accent-light: #E3C6B8; /* Soft Nude */
+    --color-accent-dark: #CDA49F; /* Muted Pink Beige */
 
-    /* colors */
-    --body-bgcolor : #fef8fa;
-    --announcement-bar-bgcolor : #E3C6B8;
-    --announcement-bar-linkbar-bgcolor : #6f5c48;
-    --header-bgcolor : #F8F4F1;
-    --navigation-links-bar-bgcolor : #C8A98C;
-    --book-now-btn-bgcolor : #645648;
-    --hero-book-now-btn-bgcolor : #C8A98C;
-    --hero-book-now-btn-bgcolor-hover : #645648;
-    --book-now-btn-bgcolor-hover : #C8A98C;
+    /* =====| Background Colors |===== */
+    --bg-body: var(--color-light);
+    --bg-announcement-bar: var(--color-accent-light);
+    --bg-announcement-linkbar: var(--color-accent-dark);
+    --bg-header: #F8F4F1; /* Off-White */
+    --bg-footer: #F8F4F1; /* Off-White */
+    --bg-navigation-bar: var(--color-accent);
+    --bg-book-now: var(--color-dark);
+    --bg-book-now-hover: var(--color-accent);
+    --bg-hero-book-now: var(--color-accent);
+    --bg-hero-book-now-hover: var(--color-dark);
+    --bg-up-button: #302a23;
+    --bg-burger-menu-lines: #CDA49F; /* Muted Pink Beige */
+    --bg-section-lines: #675341; /* Mocha Bronze */
+    --bg-service-card: #F8F4F1; /* Off-White */
+    --bg-service-card-button: #675341; /* Mocha Bronze */
+    --bg-service-card-button-hover: #E3C6B8; /* Soft Nude */
+    --bg-course-card: #FFFFFF; /* Pure White */
+    --bg-course-card-hover: #DDB3A8; /* Blush Nude Pink */
+    --bg-course-card-icon: #F8F4F1; /* Off-White */
+    --bg-location-switcher: #FFFFFF; /* Pure White */
+    --bg-contact-form: #F8F4F1; /* Off-White */
+    --bg-form-buttons: var(--color-dark);
+    --bg-form-buttons-hover: #E3C6B8; /* Soft Nude */
 
-    --section-title-fontcolor :#645648;
-    --book-now-btn-fontcolor : #C8A98C;
-    --hero-book-now-btn-fontcolor : #645648;
-    --hero-book-now-btn-fontcolor-hover : #C8A98C;
-    --book-now-btn-fontcolor-hover : #645648;
-    --announcement-bar-fontcolor : #6f5c48;
-    --navigation-links-fontcolor : #645648;
-    --navigation-links-fontcolor-hover : #C8A98C;
+    /* =====| Font Colors |===== */
+    --fontcolor-strong: #675341; /* Mocha Bronze */
+    --fontcolor-section-title: var(--color-dark);
+    --fontcolor-announcement-bar: var(--color-accent-dark);
+    --fontcolor-navigation-link: var(--color-dark);
+    --fontcolor-navigation-link-hover: var(--color-accent);
+    --fontcolor-book-now: var(--color-accent);
+    --fontcolor-book-now-hover: var(--color-dark);
+    --fontcolor-hero-book-now: var(--color-dark);
+    --fontcolor-hero-book-now-hover: var(--color-accent);
+    --fontcolor-rita-name-hero: #E8C7C2; /* Soft Nude Pink */
+    --fontcolor-hero-para: #E8C7C2; /* Soft Nude Pink */
+    --fontcolor-service-card: #675341; /* Mocha Bronze */
+    --fontcolor-service-card-button: #F8F4F1; /* Off-White */
+    --fontcolor-service-card-button-hover: #675341; /* Mocha Bronze */
+    --fontcolor-course-card-title: var(--color-dark);
+    --fontcolor-course-card-description: var(--color-dark);
+    --fontcolor-course-card-title-hover: #F8F4F1; /* Off-White */
+    --fontcolor-course-card-description-hover: #F8F4F1; /* Off-White */
+    --fontcolor-course-perk: #675341; /* Mocha Bronze */
+    --fontcolor-course-perk-description: #302a23;
+    --fontcolor-form-buttons: var(--color-accent);
+    --fontcolor-form-buttons-hover: var(--color-dark);
+    --fontcolor-contact-card-title: #675341; /* Mocha Bronze */
+    --fontcolor-contact-card-description: #675341; /* Mocha Bronze */
+    --fontcolor-footer-rita-name: #302a23;
+    --fontcolor-footer-links: #302a23;
+    --fontcolor-footer-email: #302a23;
 
+    /* =====| Borders Colors |===== */
+    --border-location-switcher: var(--color-dark);
+    --border-footer: #302a23;
 }
