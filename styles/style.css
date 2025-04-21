@@ -321,6 +321,11 @@ header{
     font-size: 2.2rem;
 }
 
+.section-title > svg
+{
+    flex-shrink: 0;
+}
+
 .section-title > svg path{
     flex-shrink: 0;
     fill: var(--bg-icon);
@@ -360,8 +365,15 @@ header{
     grid-template-rows: 300px;
     grid-template-columns: repeat(4 , 300px);
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-evenly;
     gap: 10px;
+}
+
+.brands-container > li
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .brands-container  img
