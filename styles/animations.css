@@ -130,19 +130,21 @@
 
 @keyframes showSideBar{
     0%{ 
-        opacity: 0; 
+        transform: translateX(-900px);
     }
     100%{ 
-        opacity: 1;        
+        transform: translateX(0px);
+
     }
 }
 
 @keyframes hideSideBar{
     0%{ 
-        opacity: 1; 
+        transform: translateX(0px);
+
     }
     100%{ 
-        opacity: 0;        
+        transform: translateX(-900px);
     }
 }
 

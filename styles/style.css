@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 ul,
@@ -17,7 +18,7 @@ button {
 
 strong
 {
-    color: var(--fontcolor-strong);
+    color: black;
 }
 
 textarea{
@@ -105,14 +106,17 @@ body {
     background-color: transparent;
 }
 
+.up-button > button > svg path
+{
+    stroke: var(--bg-up-button-icon);
+}
+
 header{
     display: flex;
     background-color: var(--bg-header);
     justify-content: space-between;
     align-items: center;
     padding: 5px 25px;
-    position: relative;
-    z-index: 2;
     
 }
 
@@ -158,6 +162,26 @@ header{
     bottom: -5px;
     animation: showAnimationBar 500ms ease-in-out forwards;
 }
+
+.header-controls
+{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-controls > button
+{
+    background-color: transparent;
+}
+
+.sidebar > .header-controls
+{
+    width: 100%;
+    align-self: flex-start;
+}
+
+
 
 .book-now-button{
     --shadow : rgba(0, 0, 0, 0.182);
@@ -297,8 +321,9 @@ header{
     font-size: 2.2rem;
 }
 
-.section-title > svg{
+.section-title > svg path{
     flex-shrink: 0;
+    fill: var(--bg-icon);
 }
 
 .about-container
@@ -325,6 +350,7 @@ header{
 {
     font-size: clamp(1rem, 0.9rem + 1vw, 1.5rem);
     line-height: clamp(1.6rem, 1.8rem + 1.2vw, 2.4rem);
+    color: var(--fontcolor-about-description);
     
 }
 
@@ -355,7 +381,7 @@ header{
     gap: 40px;
 }
 
-.card
+.service-card
 {
     --shadow : #8E8E8E;
     width: 400px;
@@ -378,30 +404,37 @@ header{
     transition: ease-in-out 500ms;
 }
 
-.card-header,
-.card-info {
+.service-card-header,
+.service-card-info {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
 }
 
-.card-header > h3{
+
+
+.service-card-header > h3{
     font-size: 1.35rem;
 }
 
-.card-info > .card-description{
+.service-card-header > svg
+{
+    fill: var(--bg-service-card-icon);
+}
+
+.service-card-info > .card-description{
     font-size: 1.1rem;
     max-width: 33ch;
     font-weight: 400;
 }
 
-.card-info > .card-price{
+.service-card-info > .card-price{
     font-weight: bold;
     font-size: 1.2rem;
 }
 
-.card > .line{
+.service-card > .line{
     --line-color : #675341;
 
     width: 100%;
@@ -428,7 +461,7 @@ header{
 }
 
 
-.card > .card-bgphoto
+.service-card > .card-bgphoto
 {
     position: absolute;
     bottom: 0;
@@ -437,16 +470,16 @@ header{
     transform: translateX(400px);
 }
 
-.card:hover{
+.service-card:hover{
     transform: scale(1.1);
 }
 
-.card:hover  .card-bgphoto
+.service-card:hover  .card-bgphoto
 {
     animation: showCardBg 500ms ease-in-out forwards;
 }
 
-.card > .service-card-button:hover{
+.service-card > .service-card-button:hover{
     background-color: var(--bg-service-card-button-hover);
     color: var(--fontcolor-service-card-button-hover);
 }
@@ -556,9 +589,10 @@ header{
 .course-card > svg
 {
     flex-shrink: 0;
+    fill: var(--bg-course-card-icon);
 }
 
-.course-card > svg path{
+.course-card > svg {
     transition: ease-in-out 500ms;
 }
 
@@ -572,9 +606,9 @@ header{
     color: var( --fontcolor-course-card-description-hover);
 }
 
-.course-card:hover > svg path
+.course-card:hover > svg 
 {
-    fill: var(--bg-course-card-icon);
+    fill: var(--bg-course-card-icon-hover);
 }
 
 .course-perks
@@ -591,8 +625,6 @@ header{
     color: var(--fontcolor-course-perk);
 }
 
-
-
 .course-perks > .perks-container
 {
     display: flex;
@@ -605,6 +637,11 @@ header{
     display: flex;
     align-items: center;
     gap: 12px;
+}
+
+.perks-container > li > svg
+{
+    fill: var(--bg-perks-icon);
 }
 
 .perks-container > li > p{
@@ -799,10 +836,7 @@ form > .txtarea-container
     border-radius: 12px;
     cursor: pointer;
     transition: ease-in-out 500ms;
-}
-
-.contact-info-container > .contact-card:hover{
-    transform: scale(1.05);
+    background-color: var(--bg-contact-card);
 }
 
 .contact-card > .contact-header
@@ -813,16 +847,50 @@ form > .txtarea-container
     gap: 12px;
 }
 
+.contact-header > *
+{
+    transition: ease-in-out 500ms;
+}
+
 .contact-header > h3
 {
     color: var(--fontcolor-contact-card-title);
     font-size: 1.35rem;
 }
 
+.contact-header > svg
+{
+    fill: var(--bg-contact-card-icon);
+}
+
 .contact-info > p{
     color: var(--fontcolor-contact-card-description);
     font-size: 0.9rem;
+    transition: ease-in-out 500ms;
+
 }
+
+.contact-card:hover{
+    transform: scale(1.05);
+    background-color: var(--bg-contact-card-hover);
+}
+
+.contact-card:hover > .contact-header > h3,
+.contact-card:hover > .contact-info > p
+{
+    color: var(--fontcolor-contact-card-description-hover);
+}
+
+.contact-card:hover > .contact-header > svg
+{
+    fill: var(--bg-contact-card-icon-hover);
+}
+
+.contact-card:hover > .contact-header > svg path
+{
+    fill: var(--bg-contact-card-icon-hover);
+}
+
 
 
 /* SIDEBAR */
@@ -830,16 +898,19 @@ form > .txtarea-container
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 400px;
+    transform: translateX(-900px);
     height: 100vh;
-    background:linear-gradient(to right , #F8F4F1 , #ce7a6c);
+    background:var(--bg-sidebar);
     z-index: 15;
     opacity: 1;
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-start;
     padding: 20px;
+    gap: 20px;
+    border-right: 2px solid #675341;
 }
 
 .sidebar > .navigation-container
@@ -852,7 +923,7 @@ form > .txtarea-container
 { 
     height: 100%;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
 }
 
@@ -870,6 +941,7 @@ form > .txtarea-container
 .sidebar .book-now-button
 {
     width: 50%;
+    align-self: center;
 }
 
 .close-sidebar-button{
@@ -908,7 +980,8 @@ footer > .line
     width: 3px;
     height: 130px;
     border-radius: 5px;
-    background-color: #302a23;
+    background-color: var(--bg-footer-line);
+
 }
 
 footer > .footer-navigation-container
@@ -951,9 +1024,9 @@ footer > .footer-navigation-container > ul
     width: 100%;
 }
 
-.socials-container > li > button
+.socials-container > li > a > svg
 {
-    background-color: transparent;
+    fill: var(--bg-footer-socials-icon);
 }
 
 .socials > p
@@ -1071,7 +1144,7 @@ footer > .footer-navigation-container > ul
   
   @media (max-width: 930px) {
     header > .navigation-container,
-    header > .book-now-button
+    header > .header-controls
     {
         display: none;
     }
@@ -1109,11 +1182,11 @@ footer > .footer-navigation-container > ul
         flex-direction: column;
     }
 
-    .card > .card-header > h3{
+    .service-card > .service-card-header > h3{
         font-size: 1.1rem;
     }
 
-    .card > .card-info > .card-description{
+    .service-card > .service-card-info > .card-description{
         font-size: 1rem;
     }
 
@@ -1145,6 +1218,13 @@ footer > .footer-navigation-container > ul
   }
   
   @media (max-width: 480px) {
+
+    .sidebar
+    {
+        width: 100%;
+        border-right: none;
+    }
+
     .sidebar .book-now-button
     {
         width: 100%;
@@ -1161,7 +1241,7 @@ footer > .footer-navigation-container > ul
         justify-content: space-evenly;
     }
 
-    .services-cards-container > .card{
+    .services-cards-container > .service-card{
         width: 100%;
     }
 
