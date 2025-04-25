@@ -6,32 +6,6 @@ const servicesCard = document.querySelectorAll(".services-cards-container .card"
 const locationSwitchers = document.querySelectorAll(".location-switcher");
 const sidebarLinks = document.querySelectorAll(".sidebar > .navigation-container > ul > li > a")
 const upButton = document.querySelector(".up-button");
-const themeTogglers = document.querySelectorAll(".theme-toggler");
-
-
-themeTogglers.forEach(toggler => {
-    toggler.addEventListener("click", () => {
-        const isLightTheme = document.body.classList.contains("dark-theme") === false;
-
-        // Toggle the theme on the body
-        document.body.classList.toggle("dark-theme");
-
-        // Update all togglers
-        themeTogglers.forEach(btn => {
-            const icon = btn.querySelector("img");
-            if (isLightTheme) {
-                btn.dataset.theme = "dark";
-                icon.src = "./assets/icons/dark-theme-icon.svg";
-                icon.alt = "Dark Theme Icon";
-            } else {
-                btn.dataset.theme = "light";
-                icon.src = "./assets/icons/light-theme-icon.svg";
-                icon.alt = "Light Theme Icon";
-            }
-        });
-    });
-});
-
 
 window.addEventListener("scroll" , () => {
     if(window.scrollY > 150)

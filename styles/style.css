@@ -163,26 +163,6 @@ header{
     animation: showAnimationBar 500ms ease-in-out forwards;
 }
 
-.header-controls
-{
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.header-controls > button
-{
-    background-color: transparent;
-}
-
-.sidebar > .header-controls
-{
-    width: 100%;
-    align-self: flex-start;
-}
-
-
-
 .book-now-button{
     --shadow : rgba(0, 0, 0, 0.182);
 
@@ -1156,7 +1136,7 @@ footer > .footer-navigation-container > ul
   
   @media (max-width: 930px) {
     header > .navigation-container,
-    header > .header-controls
+    header > .book-now-button
     {
         display: none;
     }
