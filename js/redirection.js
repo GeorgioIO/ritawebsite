@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded" , () => {
-    let timer = 10;
+    let timer = 5;
     setInterval(() => {
         let redirectionTimer = document.querySelector(".redirection-timer");
 
