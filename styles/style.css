@@ -713,6 +713,10 @@ form > .input-container-2 {
   height: auto;
 }
 
+#date-input {
+  display: none;
+}
+
 .input-container-2 > .services-input-container > ul {
   --border-color: #b69b81;
   display: flex;
@@ -731,7 +735,7 @@ form > .input-container-2 {
 .services-input-container > ul > li > label {
   display: flex;
   justify-content: space-between;
-  width: 270px;
+  width: 100%;
 }
 
 .services-input-container > ul > li > label span {
@@ -1011,6 +1015,11 @@ footer > .footer-navigation-container > ul {
   .contact-info-container > .contact-card {
     justify-content: center;
   }
+
+  .input-container-2 {
+    flex-direction: column;
+    gap: 12px;
+  }
 }
 
 @media (max-width: 1240px) {
@@ -1156,33 +1165,6 @@ footer > .footer-navigation-container > ul {
   }
 }
 
-@media (max-width: 580px) {
-  .input-container-2 {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  /* > .services-input-container > ul {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  } */
-
-  .services-input-container > ul > li {
-    display: flex;
-    gap: 12px;
-  }
-
-  .services-input-container > ul > li > label {
-    display: flex;
-    justify-content: space-between;
-    width: 270px;
-  }
-
-  .services-input-container > ul > li > label span {
-    font-weight: bold;
-  }
-}
 @media (max-width: 480px) {
   .sidebar {
     width: 100%;

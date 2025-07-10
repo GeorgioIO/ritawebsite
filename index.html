@@ -467,15 +467,15 @@
                         <div class="services-input-container">
                             <ul>
                                 <li>
-                                    <input type="radio" name="makeup_services" id="engagement-makeup" value="Engagement Make up">
+                                    <input type="radio" name="makeup_services" id="engagement-makeup" class="service-radio" value="Engagement Make up">
                                     <label for="">Engagement Make up : <span>50$</span></label>
                                 </li>
                                 <li>
-                                    <input type="radio" name="makeup_services" id="full-makeup" value="Engagement Make up">
+                                    <input type="radio" name="makeup_services" id="full-makeup" class="service-radio" value="Engagement Make up">
                                     <label for="">Full Make up : <span>45$</span></label>
                                 </li>
                                 <li>
-                                    <input type="radio" name="makeup_services2" id="simple-makeup" value="Simple Make up No lashes">
+                                    <input type="radio" name="makeup_services" id="simple-makeup" class="service-radio" value="Simple Make up No lashes">
                                     <label for="">Simple Make up No Lashes : <span>40$</span></label>
                                 </li>
                                 <li>
@@ -484,6 +484,10 @@
                                 </li>
                             </ul>
                         </div>
+                    </div>
+                    <div class="input-container" id="date-input">
+                        <label for="userAppointmentDate">Pick a date for you reservation*</label>
+                        <input type="datetime-local" id="userAppointmentDate" name="Reservation&nbsp;Date">
                     </div>
                     <div class="txtarea-container" >
                         <label for="userMessage">Message*</label>
