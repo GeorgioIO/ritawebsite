@@ -484,8 +484,8 @@ header {
 .gallery-container > .gallery-photo-container {
   --shadow: #8e8e8e;
 
-  width: 400px;
-  height: 400px;
+  width: 425px;
+  height: 450px;
   box-shadow: 0px 0px 5px 0px var(--shadow);
   border-radius: 0.35rem;
   overflow: hidden;
